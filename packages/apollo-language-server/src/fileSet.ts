@@ -43,6 +43,7 @@ export class FileSet {
       .sync(joinedIncludes, {
         cwd: this.rootURI.fsPath,
         absolute: true,
+        follow: true,
         ignore: this.excludes
       })
       .map(normalizeURI);
